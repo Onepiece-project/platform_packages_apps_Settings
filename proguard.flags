@@ -39,3 +39,6 @@
     public static ** SEARCH_INDEX_DATA_PROVIDER;
     public static ** SUMMARY_PROVIDER_FACTORY;
 }
+
+# Keep our custom system prefs
+-keep class com.android.settings.preference.*
