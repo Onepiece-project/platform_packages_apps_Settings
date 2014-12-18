@@ -51,6 +51,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_HOME_DOUBLE_TAP = "hardware_keys_home_double_tap";
     private static final String KEY_MENU_PRESS = "hardware_keys_menu_press";
     private static final String KEY_MENU_LONG_PRESS = "hardware_keys_menu_long_press";
+    private static final String KEY_APP_SWITCH_PRESS = "hardware_keys_app_switch_press";
+    private static final String KEY_APP_SWITCH_LONG_PRESS = "hardware_keys_app_switch_long_press";
 
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_HOME = "home_key";
@@ -88,6 +90,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private ListPreference mHomeDoubleTapAction;
     private ListPreference mMenuPressAction;
     private ListPreference mMenuLongPressAction;
+    private ListPreference mAppSwitchPressAction;
+    private ListPreference mAppSwitchLongPressAction;
 
     private PreferenceCategory mNavigationPreferencesCat;
 
@@ -110,12 +114,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         final boolean hasHomeKey = (deviceKeys & KEY_MASK_HOME) != 0;
         final boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
         final boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
+        final boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
 
         boolean hasAnyBindableKey = false;
         final PreferenceCategory homeCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_HOME);
         final PreferenceCategory menuCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_MENU);
+        final PreferenceCategory appSwitchCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_APPSWITCH);
 
         mHandler = new Handler();
 
@@ -163,6 +170,20 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else {
             prefScreen.removePreference(menuCategory);
         }
+
+        if (hasAppSwitchKey) {
+            int pressAction = Settings.System.getInt(resolver,
+                    Settings.System.KEY_APP_SWITCH_ACTION, ACTION_APP_SWITCH);
+            mAppSwitchPressAction = initActionList(KEY_APP_SWITCH_PRESS, pressAction);
+
+            int longPressAction = Settings.System.getInt(resolver,
+                    Settings.System.KEY_APP_SWITCH_LONG_PRESS_ACTION, ACTION_NOTHING);
+            mAppSwitchLongPressAction = initActionList(KEY_APP_SWITCH_LONG_PRESS, longPressAction);
+
+            hasAnyBindableKey = true;
+        } else {
+            prefScreen.removePreference(appSwitchCategory);
+        }
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -203,6 +224,14 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if (preference == mMenuLongPressAction) {
             handleActionListChange(mMenuLongPressAction, newValue,
                     Settings.System.KEY_MENU_LONG_PRESS_ACTION);
+            return true;
+        } else if (preference == mAppSwitchPressAction) {
+            handleActionListChange(mAppSwitchPressAction, newValue,
+                    Settings.System.KEY_APP_SWITCH_ACTION);
+            return true;
+        } else if (preference == mAppSwitchLongPressAction) {
+            handleActionListChange(mAppSwitchLongPressAction, newValue,
+                    Settings.System.KEY_APP_SWITCH_LONG_PRESS_ACTION);
             return true;
         }
         return false;
