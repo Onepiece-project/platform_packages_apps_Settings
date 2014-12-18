@@ -22,4 +22,8 @@
     <!-- JDCTeam Google+ Community shortcut -->
     <string name="community">JDCTeam on Google+</string>
     <string name="community_summary">Join our official community and keep in touch with us</string>
+
+    <!-- Skip tracks with volume buttons -->
+    <string name="volbtn_music_controls_title">Playback control</string>
+    <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
 </resources>
