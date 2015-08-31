@@ -1197,15 +1197,15 @@ public class Index {
                 }
                 database.setTransactionSuccessful();
             } catch (SQLiteFullException e) {
-                    Log.e(LOG_TAG, "SQLite database is full. "+e.toString());
+                    Log.e(LOG_TAG, "SQLite database is full." + e.toString());
             } catch (SQLiteException e) {
                     Log.e(LOG_TAG, e.toString());
             } finally {
                 try {
-                    if(database!=null)
-                    database.endTransaction();
+                    if (database != null)
+                        database.endTransaction();
                 } catch (SQLiteFullException e) {
-                    Log.e(LOG_TAG, "SQLite database is full. "+e.toString());
+                    Log.e(LOG_TAG, "SQLite database is full." + e.toString());
                 } catch (SQLiteException e) {
                     Log.e(LOG_TAG, e.toString());
                 }
