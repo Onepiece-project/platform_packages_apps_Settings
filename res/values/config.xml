@@ -47,6 +47,9 @@
     <!-- Config to set default APN type when adding a new APN -->
     <string name="config_default_new_apn_type" translateable="false"></string>
 
+    <!-- Config to enable duplicate APN checking. When true, disallows adding new duplicate APNs -->
+    <bool name="config_enable_duplicate_apn_checking">false</bool>
+
     <!-- SAR Level for a device -->
     <!-- Must be overlaid by device -->
     <bool name="config_show_sar_enable" translatable="false">false</bool>

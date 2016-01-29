@@ -49,4 +49,8 @@
     <!-- IC Codes -->
     <string name="ic_code_model">Model: %1$s</string>
     <string name="ic_code_full">IC: %1$s</string>
+
+    <!-- APNs screen message indicating new APN user is adding is a duplicate -->
+    <string name="duplicate_apn_error_title">Duplicate APN</string>
+    <string name="duplicate_apn_error_message">This APN already exists. Discard or change parameters.</string>
 </resources>
