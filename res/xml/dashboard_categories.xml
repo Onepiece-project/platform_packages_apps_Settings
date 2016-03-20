@@ -173,6 +173,14 @@
             android:key="@string/category_key_personal"
             android:title="@string/header_category_personal" >
 
+        <!-- Battery -->
+        <dashboard-tile
+                android:id="@+id/battery_settings"
+                android:title="@string/battery_title"
+                android:fragment="com.android.settings.aosp.BatterySettings"
+                android:icon="@drawable/ic_settings_extdesk_hidenavbar"
+                />
+
         <!-- Location -->
         <dashboard-tile
                 android:id="@+id/location_settings"
