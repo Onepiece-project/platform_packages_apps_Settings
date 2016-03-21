@@ -70,6 +70,7 @@ import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
+import com.android.settings.aosp.BatterySettings;
 import com.android.settings.applications.DrawOverlayDetails;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
@@ -282,7 +283,8 @@ public class SettingsActivity extends Activity
             R.id.bitsyko_layers,
             R.id.supersu_settings,
             R.id.stweaks,
-            R.id.toolbox
+            R.id.toolbox,
+            R.id.battery_settings
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -358,6 +360,7 @@ public class SettingsActivity extends Activity
             ProcessStatsSummary.class.getName(),
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
+            BatterySettings.class.getName(),
     };
 
 
