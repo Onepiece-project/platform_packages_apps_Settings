@@ -232,7 +232,7 @@ public class SimDialogActivity extends Activity {
                 }
             };
 
-        int currentIndex = -1;
+        int currentIndex = 0;
         ArrayList<SubscriptionInfo> callsSubInfoList = new ArrayList<SubscriptionInfo>();
         if (id == CALLS_PICK) {
             final TelecomManager telecomManager = TelecomManager.from(context);
@@ -289,7 +289,7 @@ public class SimDialogActivity extends Activity {
                 }
             }
         } else {
-            SubscriptionInfo defaultSub = subscriptionManager.getDefaultDataSubscriptionInfo();
+            final int defaultDataSubId = SubscriptionManager.getDefaultDataSubId();
             for (int i = 0; i < selectableSubInfoLength; ++i) {
                 final SubscriptionInfo sir = subInfoList.get(i);
                 CharSequence displayName = sir.getDisplayName();
@@ -297,8 +297,7 @@ public class SimDialogActivity extends Activity {
                     displayName = "";
                 }
                 list.add(displayName.toString());
-                if (defaultSub != null && defaultSub.getSubscriptionId()
-                        == sir.getSubscriptionId()) {
+                if (defaultDataSubId == sir.getSubscriptionId()) {
                     currentIndex = list.size() - 1;
                 }
             }
