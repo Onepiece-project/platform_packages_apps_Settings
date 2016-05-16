@@ -16,6 +16,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/battery_title">
 
     <PreferenceCategory
@@ -48,13 +49,13 @@
             android:entries="@array/battery_bar_entries"
             android:entryValues="@array/battery_bar_values" />
 
-        <com.android.settings.aosp.ColorPickerPreference
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="battery_bar_color"
             android:title="@string/battery_bar_color"
             android:defaultValue="0xffffffff"
             android:dialogTitle="@string/battery_bar_color"
             settings:alphaSlider="true"
-            settings:alphaText="true" />
+        settings:alphaText="true" />
 
         <ListPreference
             android:key="battery_bar_style"
