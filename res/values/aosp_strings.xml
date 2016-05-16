@@ -231,4 +231,16 @@
     <!-- Enable/Disable Blur effect -->
     <string name="blur_effect_title">Enable/Disable Blur effect</string>
     <string name="blur_effect_summary">Allow user to enable or disable blur effect on the lockscreen (Requires a Reboot).</string>
+
+    
+    <!-- Color picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint" translatable="false">#FFDDDDDD</string>
+    <string name="hex_check_button_text">PREVIEW</string>
+    <string name="hex_reset_button_text">RESET</string>
+    <string name="color_right_arrow" translatable="false">"→"</string>
+    <string name="color_down_arrow" translatable="false">"↓"</string>
+    <string name="longpress_info">Longpress box to save color</string>
 </resources>
