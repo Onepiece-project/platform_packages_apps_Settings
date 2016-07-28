@@ -64,4 +64,8 @@
     <!-- IC Code -->
     <string name="ic_code" translatable="false"></string>
     <string name="ic_model" translatable="false"></string>
+
+    <!-- Does the device allow for manual subscription provisioning? Only works for multi-sim devices,
+         and currently depends on QC's proprietary telephony stack -->
+    <bool name="config_enableManualSubProvisioning">true</bool>
 </resources>
