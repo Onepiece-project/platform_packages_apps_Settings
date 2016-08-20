@@ -128,5 +128,5 @@
 
     <!-- Enable/Disable Blur effect -->
     <string name="blur_effect_title">Abilita/Disabilita effetto Blur</string>
-    <string name="blur_effect_summary">Permette all\'utente di abilitare o disabilitare l\' effetto Blur nella schermata di blocco</string>
+    <string name="blur_effect_summary">Permette all\'utente di abilitare o disabilitare l\' effetto Blur nella schermata di blocco (Richiede un Riavvio).</string>
 </resources>
