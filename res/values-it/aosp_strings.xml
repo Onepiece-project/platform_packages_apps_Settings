@@ -113,4 +113,20 @@
     <!-- Skip tracks with volume buttons -->
     <string name="volbtn_music_controls_title">Controllo riproduzione</string>
     <string name="volbtn_music_controls_summary">Quando lo schermo è spento, la pressione prolungata dei tasti volume permette di avanzare alla traccia successiva o di tornare alla precedente</string>
+
+    <!-- Advanced storage settings -->
+    <string name="storage_advanced_titlebar">Impostazioni Avanzate</string>
+    <string name="storage_menu_advanced">Avanzate</string>
+
+    <!-- USB data automatic unlock -->
+    <string name="usb_data_auto_unlock_title">Sblocca trasferimento dati USB</string>
+    <string name="usb_data_auto_unlock_summary">Permette di selezionare la connessione USB (MTP, PTP) di default alla connessione</string>
+    <string name="usb_data_auto_unlock_warning_summary">Il dispositivo stabilirà connessioni non protette ogni volta che verrà connesso ad un PC. La schermata di blocco con protezione disabilita automaticamente questa opzione.\n\nQuesta è ancora un\'opzione sperimentale, usare con cautela.</string>
+
+    <!-- App details: open play store link if app is user installed -->
+    <string name="app_play_store">Play Store</string>
+
+    <!-- Enable/Disable Blur effect -->
+    <string name="blur_effect_title">Abilita/Disabilita effetto Blur</string>
+    <string name="blur_effect_summary">Permette all\'utente di abilitare o disabilitare l\' effetto Blur nella schermata di blocco</string>
 </resources>
