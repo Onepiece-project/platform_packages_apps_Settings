@@ -157,4 +157,8 @@
 
     <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
+
+    <!-- Enable/Disable Blur effect -->
+    <string name="blur_effect_title">Enable/Disable Blur effect</string>
+    <string name="blur_effect_summary">Allow user to enable or disable blur effect on the lockscreen</string>
 </resources>
