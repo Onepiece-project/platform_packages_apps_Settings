@@ -48,7 +48,7 @@
                 android:key="ui_blur_enabled"
                 android:title="@string/blur_effect_title"
                 android:summary="@string/blur_effect_summary"
-                android:defaultValue="false" />
+                android:defaultValue="true" />
 
         <PreferenceScreen
                 android:key="wallpaper"
