@@ -272,10 +272,6 @@ public class SimDialogActivity extends Activity {
             } catch (RemoteException | NullPointerException e) {
                 // Assume sms prompt is disabled
             }
-            // External telephony interfaces may not exist, fall back to our impl
-            if (mExtTelephony == null) {
-                isSMSPrompt = SmsManager.getDefault().isSMSPromptEnabled();
-            }
             for (int i = 0; i < selectableSubInfoLength; ++i) {
                 final SubscriptionInfo sir = subInfoList.get(i);
                 smsSubInfoList.add(sir);
