@@ -36,5 +36,7 @@
 
     <!-- Storage Summary Title -->
     <color name="storage_summary_title_color">#ff607d8b</color>
+    <!-- Gesture settings switchbar background -->
+    <color name="gestures_switchbar_color">@android:color/white</color>
 
 </resources>
