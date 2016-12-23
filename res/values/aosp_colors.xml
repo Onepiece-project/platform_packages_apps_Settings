@@ -16,4 +16,6 @@
 <resources>
     <!-- Gesture settings switchbar background -->
     <color name="gestures_switchbar_color">@android:color/white</color>
+    <!-- External Icon Tint -->
+    <color name="external_tile_icon_tint_color">?android:attr/colorAccent</color>
 </resources>
