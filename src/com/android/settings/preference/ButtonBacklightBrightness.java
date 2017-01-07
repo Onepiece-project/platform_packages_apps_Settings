@@ -44,8 +44,6 @@ public class ButtonBacklightBrightness extends DialogPreference implements
         SeekBar.OnSeekBarChangeListener {
     private static final int DEFAULT_BUTTON_TIMEOUT = 5;
 
-    private Window mWindow;
-
     private BrightnessControl mButtonBrightness;
     private BrightnessControl mActiveControl;
 
@@ -124,10 +122,6 @@ public class ButtonBacklightBrightness extends DialogPreference implements
                 }
             }
         });
-
-        if (getDialog() != null) {
-            mWindow = getDialog().getWindow();
-        }
         updateBrightnessPreview();
     }
 
@@ -213,15 +207,17 @@ public class ButtonBacklightBrightness extends DialogPreference implements
     }
 
     private void updateBrightnessPreview() {
-        if (mWindow != null) {
-            LayoutParams params = mWindow.getAttributes();
-            if (mActiveControl != null) {
-                params.buttonBrightness = (float) mActiveControl.getBrightness(false) / 255.0f;
-            } else {
-                params.buttonBrightness = -1;
-            }
-            mWindow.setAttributes(params);
+        if (getDialog() == null || getDialog().getWindow() == null) {
+            return;
         }
+        Window window = getDialog().getWindow();
+        LayoutParams params = window.getAttributes();
+        if (mActiveControl != null) {
+            params.buttonBrightness = (float) mActiveControl.getBrightness(false) / 255.0f;
+        } else {
+            params.buttonBrightness = -1;
+        }
+        window.setAttributes(params);
     }
 
     private void updateTimeoutEnabledState() {
