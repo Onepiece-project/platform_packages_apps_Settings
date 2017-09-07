@@ -18,4 +18,8 @@
     <!-- Device Maintainer -->
     <string name="device_maintainer">Device Maintainer</string>
     <string name="device_maintainer_default">Unofficial</string>
+
+    <!-- JDCTeam Google+ Community shortcut -->
+    <string name="community">JDCTeam on Google+</string>
+    <string name="community_summary">Join our official community and keep in touch with us</string>
 </resources>
