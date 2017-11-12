@@ -18,6 +18,13 @@
         xmlns:settings="http://schemas.android.com/apk/res-auto"
         android:title="@string/about_settings">
 
+     
+     <!--ONE PIECE HEADER-->
+	 <PreferenceScreen android:key="one_logo"
+			   android:layout="@layout/logo_one" />
+     
+     
+     
         <!-- System update settings - launches activity -->
         <PreferenceScreen android:key="system_update_settings"
                 android:title="@string/system_update_settings_list_item_title"
